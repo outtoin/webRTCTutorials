@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="WebRTC Example">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+<body>
+
+<label> Name:
+    <input id="nameInput"/>
+</label>
+
+<button id="startButton">START</button>
+<button id="joinButton">JOIN</button>
+<button id="hangupButton">STOP</button>
+<br>
+<label>
+    <input type="number"/>
+</label>
+<button id="callButton">CALL</button>
+
+<script src="/javascripts/client.js"></script>
+
+<div id="users"></div>
+
+</body>
+</html>
