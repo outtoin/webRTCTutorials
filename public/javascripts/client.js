@@ -48,9 +48,7 @@ signalingSocket.on('sdpAnswer', function (data) {
 });
 
 function handleSuccess(stream) {
-	let localMedia = $("<video playsinline>");
-	localMedia.attr("autoplay", "autoplay");
-	localMedia.attr("muted", "true");
+	let localMedia = $("<video playsinline autoplay muted>");
 	$('#users').append(localMedia);
 	localMedia[0].srcObject = stream;
 	localMediaStream = stream;
@@ -104,9 +102,7 @@ signalingSocket.on('addPeer', function (data) {
 	};
 
 	peerConnection.onaddstream = function (ev) {
-		let remoteMedia = $("<video playsinline>");
-		remoteMedia.attr("autoplay", "autoplay");
-		remoteMedia.attr("muted", "true");
+		let remoteMedia = $("<video playsinline autoplay>");
 		$('#users').append(remoteMedia);
 		remoteMedia[0].srcObject = ev.stream;
 	};
